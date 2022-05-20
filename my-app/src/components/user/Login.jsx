@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.css";
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
@@ -28,8 +28,8 @@ const Login = () => {
 
   return (
     <>
-      <body>
-        <h1>Please login with a valid Spotify account for a complete user experience</h1>
+      <body className='login-page'>
+        <h1 className='titles'>Please login with a valid Spotify account for a complete user experience</h1>
         <button className="user-login-button" onClick={handleLogin}>login to spotify</button>
       </body>
     </>

@@ -1,8 +1,6 @@
 import React from "react";
-import {useState, useEffect} from 'react'
-
-
-
+import "./Home.css";
+import { useState, useEffect } from "react";
 
 const getReturnedParamsFromSpotifyAuth = (hash) => {
   const stringAfterHashtag = hash.substring(1);
@@ -17,11 +15,9 @@ const getReturnedParamsFromSpotifyAuth = (hash) => {
   return paramsSplitUp;
 };
 
-
 const Home = () => {
-
   useEffect(() => {
-    console.log("start of use effect")
+    console.log("start of use effect");
     if (window.location.hash) {
       const { access_token, expires_in, token_type } =
         getReturnedParamsFromSpotifyAuth(window.location.hash);
@@ -33,22 +29,33 @@ const Home = () => {
       localStorage.setItem("expiresIn", expires_in);
 
       const options = {
-        'headers' : {
-            'Authorization':'Bearer ' + access_token 
-        }
-    }
-    
-    fetch('https://api.spotify.com/v1/me/playlists', options)
-        .then( res => res.json() )
-        .then( json => console.log("fetch response",json) )
+        headers: {
+          Authorization: "Bearer " + access_token,
+        },
+      };
+
+      fetch("https://api.spotify.com/v1/me/playlists", options)
+        .then((res) => res.json())
+        .then((json) => console.log("fetch response", json));
     }
   });
-    return (
-        <>
+  return (
+      <body className='home-page'>
+        <div className='left-side'>
           <h1>Welcome to your inner music sanctuary!</h1>
           <h2>Let's Start building</h2>
-          </>
-      );
-    };
+        </div>
+        <div className='top'>
 
-    export default Home
+        </div>
+        <div className='middle'>
+
+        </div>
+        <div className='bottom'>
+
+        </div>
+      </body>
+  );
+};
+
+export default Home;
