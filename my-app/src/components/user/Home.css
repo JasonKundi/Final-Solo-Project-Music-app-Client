@@ -8,35 +8,15 @@
   height: 100vh;
 }
 
-.left-side {
-  background-color: #b153a3;
-  grid-row-start: 1;
-  grid-column-start: 1;
+.home-grid {
 
-  grid-row-end: 4;
-  grid-column-end: 2;
-}
-.bottom {
-  background-color: #dbec93;
-  grid-row-start: 3;
-  grid-column-start: 2;
+    background-color: #BBBBBB; 
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 4;
+    grid-column-end: 6;
+    
+ }
 
-  grid-row-end: 4;
-  grid-column-end: 6;
-}
-.middle {
-  background-color: #a13e28;
-  grid-row-start: 2;
-  grid-column-start: 2;
-
-  grid-row-end: 3;
-  grid-column-end: 6;
-}
-.top {
-  background-color: #3d1e1c;
-  grid-row-start: 1;
-  grid-column-start: 2;
-
-  grid-row-end: 2;
-  grid-column-end: 6;
-}
+ 

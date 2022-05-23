@@ -1,0 +1,31 @@
+.bookshelf {
+    position: fixed;
+    bottom: -65px;
+}
+
+
+
+.shelf {
+    width: 280px;
+    margin: 50px auto;
+    box-shadow: 5px 5px 50px #000;
+  }
+  
+  .shelf .column {
+    border-style: solid;
+    border-width: 0 10px 8px 8px;
+    border-color: #a44914;
+  }
+  
+  .shelf .column .rand {
+    border-bottom: 100px solid #a44914;
+    border-right: 1px solid #a44914;
+  }
+  
+  .shelf .column .inside {
+    border-style: solid;
+    border-color: #a44914;
+    height: 100px;
+    box-shadow: inset 5px 5px 20px #000, inset 2px -2px 20px #111;
+  }
+  

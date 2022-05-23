@@ -15,7 +15,6 @@ const SCOPES = [
 const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
 
 
-
 //  	https://api.spotify.com/v1/me/playlists
 
 const Login = () => {

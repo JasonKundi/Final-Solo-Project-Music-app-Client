@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Bookshelf from '../bedroom/Bookshelf.jsx'
 import { useState, useEffect } from "react";
 
 const getReturnedParamsFromSpotifyAuth = (hash) => {
@@ -41,18 +42,10 @@ const Home = () => {
   });
   return (
       <body className='home-page'>
-        <div className='left-side'>
+        <div className='home-grid'>
           <h1>Welcome to your inner music sanctuary!</h1>
           <h2>Let's Start building</h2>
-        </div>
-        <div className='top'>
-
-        </div>
-        <div className='middle'>
-
-        </div>
-        <div className='bottom'>
-
+          <Bookshelf/>
         </div>
       </body>
   );
