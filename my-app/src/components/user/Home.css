@@ -10,7 +10,7 @@
 
 .home-grid {
 
-    background-color: #BBBBBB; 
+    background-color: hsl(46, 97%, 70%); 
     grid-row-start: 1;
     grid-column-start: 1;
  

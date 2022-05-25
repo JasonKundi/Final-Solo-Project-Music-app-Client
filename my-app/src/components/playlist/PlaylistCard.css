@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 6px solid #a44914;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-left: 12rem;
+  padding-top: 40px;
+  list-style-type: none;
+}
+
+.container::-webkit-scrollbar {
+  display: 0;
+
+}
+
+.playlist-Card {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+}
+
+.playlist-Card:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.playlist-image {
+  width: 80px;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+.playlist-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 8px;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  padding: 2rem;
+}

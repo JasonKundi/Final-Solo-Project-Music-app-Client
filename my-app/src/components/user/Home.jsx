@@ -1,7 +1,11 @@
 import React from "react";
 import "./Home.css";
-import Bookshelf from '../bedroom/Bookshelf.jsx'
+import Bed from "../bedroom/Bed.jsx";
+import Bookshelf from "../bedroom/Bookshelf.jsx";
+import PlaylistCard from "../playlist/PlaylistCard.jsx"
 import { useState, useEffect } from "react";
+
+
 
 const getReturnedParamsFromSpotifyAuth = (hash) => {
   const stringAfterHashtag = hash.substring(1);
@@ -17,6 +21,7 @@ const getReturnedParamsFromSpotifyAuth = (hash) => {
 };
 
 const Home = () => {
+  const [playlists, setPlaylists] = useState([]);
   useEffect(() => {
     console.log("start of use effect");
     if (window.location.hash) {
@@ -37,17 +42,20 @@ const Home = () => {
 
       fetch("https://api.spotify.com/v1/me/playlists", options)
         .then((res) => res.json())
-        .then((json) => console.log("fetch response", json));
+        .then((json) => {
+          setPlaylists(json.items);
+          console.log("fetch response", json.items);
+        });
     }
-  });
+  }, []);
   return (
-      <body className='home-page'>
-        <div className='home-grid'>
-          <h1>Welcome to your inner music sanctuary!</h1>
-          <h2>Let's Start building</h2>
-          <Bookshelf/>
-        </div>
-      </body>
+    <body className='home-page'>
+      <div className='home-grid'>
+        <Bookshelf />
+        <Bed />
+        <PlaylistCard playlists = {playlists}/>
+      </div>
+    </body>
   );
 };
 

@@ -28,6 +28,7 @@ const Login = () => {
   return (
     <>
       <body className='login-page'>
+        <img className='title-page-logo' alt='logo' src={require('../assets/hylla logo.png')}></img>
         <h1 className='titles'>Please login with a valid Spotify account for a complete user experience</h1>
         <button className="user-login-button" onClick={handleLogin}>login to spotify</button>
       </body>
