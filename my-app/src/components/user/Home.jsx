@@ -2,7 +2,8 @@ import React from "react";
 import "./Home.css";
 import Bed from "../bedroom/Bed.jsx";
 import Bookshelf from "../bedroom/Bookshelf.jsx";
-import PlaylistCard from "../playlist/PlaylistCard.jsx"
+import PlaylistCard from "../playlist/PlaylistCard.jsx";
+import Playbar from "../playbar/Playbar.jsx";
 import { useState, useEffect } from "react";
 
 
@@ -22,8 +23,9 @@ const getReturnedParamsFromSpotifyAuth = (hash) => {
 
 const Home = () => {
   const [playlists, setPlaylists] = useState([]);
+  const [token, setToken]= useState(null)
+  const [currentPlaylist, setCurrentPlaylist]= useState(null)
   useEffect(() => {
-    console.log("start of use effect");
     if (window.location.hash) {
       const { access_token, expires_in, token_type } =
         getReturnedParamsFromSpotifyAuth(window.location.hash);
@@ -33,6 +35,7 @@ const Home = () => {
       localStorage.setItem("accessToken", access_token);
       localStorage.setItem("tokenType", token_type);
       localStorage.setItem("expiresIn", expires_in);
+      setToken(access_token);
 
       const options = {
         headers: {
@@ -53,7 +56,8 @@ const Home = () => {
       <div className='home-grid'>
         <Bookshelf />
         <Bed />
-        <PlaylistCard playlists = {playlists}/>
+        <PlaylistCard playlists = {playlists} setCurrentPlaylist ={setCurrentPlaylist} />
+        <Playbar token = {token} currentPlaylist={currentPlaylist} />
       </div>
     </body>
   );
