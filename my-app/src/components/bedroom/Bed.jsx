@@ -1,11 +1,12 @@
 import React from "react";
-import {useNavigate} from "react";
+import { useNavigate } from "react";
 import "./Bed.css";
 import "../assets/netclipart.com-bed-clipart-357940.png";
 
 const Bed = () => {
+    // let navigate = useNavigate()
     // const handleLogout = () => {
-    //     // useNavigate("/")
+    //     navigate('/')
     // }
   return (
     <>
@@ -14,10 +15,8 @@ const Bed = () => {
           className='bedSvg'
           alt='bed'
           src={require("../assets/netclipart.com-bed-clipart-357940.png")}
+        //   onClick={()=> handleLogout}
         >
-          {/* <button className='user-login-button' onClick={handleLogout}>
-            Logout
-          </button> */}
         </img>
       </div>
     </>
