@@ -1,5 +1,7 @@
 # Final-Solo-Project-Music-app-Client
 
+A Virtual Tour Into Your Music Sanctuary!
+
 
 ![Hylla app home](https://user-images.githubusercontent.com/94011909/170559949-4c7a122d-b5fc-481d-8f5e-4234988a08fd.PNG)
 ![Hylla app login](https://user-images.githubusercontent.com/94011909/170564432-7f504d8a-9acb-4640-83d2-657dbbd16555.PNG)
